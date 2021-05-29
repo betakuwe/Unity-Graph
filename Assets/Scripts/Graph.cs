@@ -4,16 +4,13 @@ public class Graph : MonoBehaviour
 {
     [SerializeField]
     Transform pointPrefab;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        Transform point = Instantiate(pointPrefab);
+        point.localPosition = Vector3.right;
+
+        point = Instantiate(pointPrefab);
+        point.localPosition = Vector3.right * 2f;
     }
 }
